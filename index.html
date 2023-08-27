@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link reL="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <h1>Đăng nhập</h1>
+        <form>
+            <div class="text-box">
+            <h4>EMAIL</h4>
+            <input id="email_login" type="email" placeholder="Nhập email của bạn" ></input>
+            </div>
+            <div class="text-box">
+            <h4>PASSWORD</h4>
+            <input id="password_login" type="password" placeholder="Nhập password của bạn" ></input>
+            </div>
+            <div class="text-box">
+            <a href="home.html" button onclick="login(event)" class="button-9">ĐĂNG NHẬP</button> </a> <br>
+            <a href="dangky.html">(*)Bạn chưa có tài khoản?</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script>
+        login= (event) => {
+            event.preventDefault();
+            let emailvalue=document.getElementById("email_login").value;
+            console.log(emailvalue);
+            let passwordvalue=document.getElementById("password_login").value;
+            console.log(passwordvalue);
+            if (emailvalue === "" || passwordvalue === ""){
+                alert("please fill in your form")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Un</title>
+    <link reL="stylesheet" href="signin.css">
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <h1>Đăng ký</h1>
+        <form>
+            <div class="text-box">
+            <h4>EMAIL</h4>
+            <input id="email" type="email" placeholder="Nhập email của bạn" ></input>
+            </div>
+            <div class="text-box">
+            <h4>PASSWORD</h4>
+            <input id="pw"type="password" placeholder="Nhập password của bạn" ></input>
+            </div>
+            <div class="text-box">
+            <h4>CONFIRM PASSWORD</h4>
+            <input id="cfpw" type="password" placeholder="Xác nhận thông tin mật khẩu" ></input>
+            </div>
+            <div class="text-box">
+            <button onclick="signup(event)" class="button-9">ĐĂNG KÝ</button> <br>
+            <a href="index.html">(*)Bạn đã có tài khoản?</a>
+            </div>
+        </form>
+    </div>
+    </div>
+    <script>
+        signup=(event)=>{
+            event.preventDefault();
+            let pw=document.getElementById("pw").value;
+            let cfpw=document.getElementById("cfpw").value;
+            let email=document.getElementById("email").value;
+            console.log(pw);
+            console.log(cfpw);
+            if (pw ==="" || cfpw ==="" || email ==="") {
+                alert('Please fill in the form');
+            }
+            if (pw !== cfpw) {
+                alert('Invalid password')
+            }  else  {
+                alert("SignUp sucessful")
+            }
+        }
+    </script>
+</body>
+</html>
